@@ -8,6 +8,7 @@
     <link rel="stylesheet" type="text/css" href="{% static 'spectrum-css/vars/spectrum-medium.css' %}">
     <link rel="stylesheet" type="text/css" href="{% static 'spectrum-css/vars/spectrum-lightest.css' %}">
 
+    <link rel="stylesheet" type="text/css" href="{% static 'spectrum-css/icon/index-vars.css' %}">
     <link rel="stylesheet" type="text/css" href="{% static 'spectrum-css/label/index-vars.css' %}">
     <link rel="stylesheet" type="text/css" href="{% static 'spectrum-css/table/index-vars.css' %}">
     <link rel="stylesheet" type="text/css" href="{% static 'spectrum-css/button/index-vars.css' %}">
@@ -43,6 +44,12 @@
     {% endblock content %}
 
 </main>
+
+<script type="module">
+    import loadIcons from '{% static 'loadicons/index.js' %}';
+
+    loadIcons('{% static 'spectrum-css/icon/spectrum-css-icons-medium.svg' %}')
+</script>
 
 </body>
 </html>
