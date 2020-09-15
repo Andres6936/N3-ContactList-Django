@@ -1,0 +1,87 @@
+{% load static %}
+<!DOCTYPE html>
+<html class="spectrum spectrum--medium spectrum--lightest" lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <link rel="stylesheet" type="text/css" href="{% static 'spectrum-css/vars/spectrum-global.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'spectrum-css/vars/spectrum-medium.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'spectrum-css/vars/spectrum-lightest.css' %}">
+
+    <link rel="stylesheet" type="text/css" href="{% static 'spectrum-css/label/index-vars.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'spectrum-css/table/index-vars.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'spectrum-css/button/index-vars.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'spectrum-css/actiongroup/index-vars.css' %}">
+
+    <link rel="stylesheet" type="text/css" href="{% static 'bootstrap/bootstrap-grid.css' %}">
+
+    <title>Macondo Home</title>
+</head>
+<body>
+
+<main class="col-8 mx-auto pt-5">
+    <section class="row row-cols-2">
+        <div class="col col-8">
+            <table class="spectrum-Table">
+                <thead class="spectrum-Table-head">
+                <tr>
+                    <th class="spectrum-Table-headCell">Column Title</th>
+                    <th class="spectrum-Table-headCell">Column Title</th>
+                    <th class="spectrum-Table-headCell">Column Title</th>
+                </tr>
+                </thead>
+
+                <tbody class="spectrum-Table-body">
+                <tr class="spectrum-Table-row">
+                    <td class="spectrum-Table-cell" tabindex="0">Row Item Alpha</td>
+                    <td class="spectrum-Table-cell" tabindex="0">Row Item Alpha</td>
+                    <td class="spectrum-Table-cell" tabindex="0">Row Item Alpha</td>
+                </tr>
+                <tr class="spectrum-Table-row">
+                    <td class="spectrum-Table-cell" tabindex="0">Row Item Bravo</td>
+                    <td class="spectrum-Table-cell" tabindex="0">Row Item Bravo</td>
+                    <td class="spectrum-Table-cell" tabindex="0">Row Item Bravo</td>
+                </tr>
+                <tr class="spectrum-Table-row">
+                    <td class="spectrum-Table-cell" tabindex="0">Row Item Charlie</td>
+                    <td class="spectrum-Table-cell" tabindex="0">Row Item Charlie</td>
+                    <td class="spectrum-Table-cell" tabindex="0">Row Item Charlie</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="col col-4">
+            <div class="spectrum-ActionGroup spectrum-ActionGroup--vertical spectrum-ActionGroup--compact">
+                <button class="spectrum-ActionButton spectrum-ActionGroup-item">
+                    <span class="spectrum-ActionButton-label">View</span>
+                </button>
+
+                <button class="spectrum-ActionButton spectrum-ActionGroup-item">
+                    <span class="spectrum-ActionButton-label">Search</span>
+                </button>
+
+                <button class="spectrum-ActionButton spectrum-ActionGroup-item is-selected">
+                    <span class="spectrum-ActionButton-label">Delete</span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <section class="row row-cols-2">
+        <div class="col">
+
+        </div>
+
+        <div class="col">
+
+        </div>
+    </section>
+
+    <section class="row">
+
+    </section>
+</main>
+
+</body>
+</html>
