@@ -11,6 +11,8 @@
     <link rel="stylesheet" type="text/css" href="{% static 'spectrum-css/label/index-vars.css' %}">
     <link rel="stylesheet" type="text/css" href="{% static 'spectrum-css/table/index-vars.css' %}">
     <link rel="stylesheet" type="text/css" href="{% static 'spectrum-css/button/index-vars.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'spectrum-css/textfield/index-vars.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'spectrum-css/fieldlabel/index-vars.css' %}">
     <link rel="stylesheet" type="text/css" href="{% static 'spectrum-css/actiongroup/index-vars.css' %}">
 
     <link rel="stylesheet" type="text/css" href="{% static 'bootstrap/bootstrap-grid.css' %}">
@@ -68,12 +70,38 @@
         </div>
     </section>
 
-    <section class="row row-cols-2">
-        <div class="col">
+    <section class="row row-cols-2 pt-5">
+        <div class="col col-8">
+            <div class="col-12">
+                <label for="lifestory" class="col-4 spectrum-FieldLabel spectrum-FieldLabel--left">First Name</label>
+                <div class="col-7 spectrum-Textfield">
+                  <input type="text" placeholder="Enter your name" name="field" value="" class="spectrum-Textfield-input">
+                </div>
+            </div>
 
+            <div class="col-12">
+                <label for="lifestory" class="col-4 spectrum-FieldLabel spectrum-FieldLabel--left">Last Name</label>
+                <div class="col-7 spectrum-Textfield">
+                  <input type="text" placeholder="Enter your name" name="field" value="" class="spectrum-Textfield-input">
+                </div>
+            </div>
+
+            <div class="col-12">
+                <label for="lifestory" class="col-4 spectrum-FieldLabel spectrum-FieldLabel--left">Address</label>
+                <div class="col-7 spectrum-Textfield">
+                  <input type="text" placeholder="Enter your name" name="field" value="" class="spectrum-Textfield-input">
+                </div>
+            </div>
+
+            <div class="col-12">
+                <label for="lifestory" class="col-4 spectrum-FieldLabel spectrum-FieldLabel--left">Email</label>
+                <div class="col-7 spectrum-Textfield">
+                  <input type="text" placeholder="Enter your name" name="field" value="" class="spectrum-Textfield-input">
+                </div>
+            </div>
         </div>
 
-        <div class="col">
+        <div class="col col-4">
 
         </div>
     </section>
