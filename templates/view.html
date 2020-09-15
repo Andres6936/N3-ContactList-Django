@@ -1,9 +1,9 @@
 {% extends 'base.html' %}
 {% block content %}
 
-    <section class="row row-cols-2" style="background-color: #ffffff">
-        <div class="col col-8">
-            <table class="spectrum-Table">
+    <section class="row row-cols-1" style="background-color: #ffffff">
+        <div class="col">
+            <table class="col-12 spectrum-Table">
                 <thead class="spectrum-Table-head">
                 <tr>
                     <th class="spectrum-Table-headCell">Column Title</th>
@@ -31,31 +31,20 @@
                 </tbody>
             </table>
         </div>
-
-        <div class="col col-4">
-            <div class="spectrum-ActionGroup spectrum-ActionGroup--vertical spectrum-ActionGroup--compact">
-                <button class="spectrum-ActionButton spectrum-ActionGroup-item">
-                    <span class="spectrum-ActionButton-label">View</span>
-                </button>
-
-                <button class="spectrum-ActionButton spectrum-ActionGroup-item">
-                    <span class="spectrum-ActionButton-label">Search</span>
-                </button>
-
-                <button class="spectrum-ActionButton spectrum-ActionGroup-item is-selected">
-                    <span class="spectrum-ActionButton-label">Delete</span>
-                </button>
-            </div>
-        </div>
     </section>
 
-    <section class="row py-5" style="background-color: #ffffff">
+    <section class="row py-5 px-3" style="background-color: #ffffff">
         <div class="col-12 spectrum-ActionGroup spectrum-ActionGroup--compact">
-            <button class="col-6 spectrum-ActionButton spectrum-ActionGroup-item">
-                <span class="spectrum-ActionButton-label">Edit</span>
+            <button class="col-4 spectrum-ActionButton spectrum-ActionGroup-item">
+                <span class="spectrum-ActionButton-label">View</span>
             </button>
-            <button class="col-6 spectrum-ActionButton spectrum-ActionGroup-item">
-                <span class="spectrum-ActionButton-label">Copy</span>
+
+            <button class="col-4 spectrum-ActionButton spectrum-ActionGroup-item">
+                <span class="spectrum-ActionButton-label">Search</span>
+            </button>
+
+            <button class="col-4 spectrum-ActionButton spectrum-ActionGroup-item">
+                <span class="spectrum-ActionButton-label">Delete</span>
             </button>
         </div>
     </section>
