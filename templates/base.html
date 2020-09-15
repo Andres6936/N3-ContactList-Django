@@ -11,6 +11,7 @@
     <link rel="stylesheet" type="text/css" href="{% static 'spectrum-css/label/index-vars.css' %}">
     <link rel="stylesheet" type="text/css" href="{% static 'spectrum-css/table/index-vars.css' %}">
     <link rel="stylesheet" type="text/css" href="{% static 'spectrum-css/button/index-vars.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'spectrum-css/sidenav/index-vars.css' %}">
     <link rel="stylesheet" type="text/css" href="{% static 'spectrum-css/textfield/index-vars.css' %}">
     <link rel="stylesheet" type="text/css" href="{% static 'spectrum-css/fieldlabel/index-vars.css' %}">
     <link rel="stylesheet" type="text/css" href="{% static 'spectrum-css/actiongroup/index-vars.css' %}">
@@ -22,6 +23,21 @@
 <body>
 
 <main class="col-8 mx-auto pt-5">
+
+    <nav class="row justify-content-end pb-3">
+        <div class="spectrum-SideNav-item is-selected">
+            <a href="#" class="spectrum-SideNav-itemLink">Home</a>
+        </div>
+
+        <div class="spectrum-SideNav-item">
+            <a href="#" class="spectrum-SideNav-itemLink">View</a>
+        </div>
+
+        <div class="spectrum-SideNav-item">
+            <a href="#" class="spectrum-SideNav-itemLink">Add</a>
+        </div>
+    </nav>
+
     <section class="row row-cols-2">
         <div class="col col-8">
             <table class="spectrum-Table">
