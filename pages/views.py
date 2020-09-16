@@ -8,8 +8,10 @@ def index(request, pagename):
 
 
 def add(request):
+    submitted = False
     if request.method == 'POST':
         return HttpResponseRedirect('/add?submitted=True')
-    elif request.method == 'GET':
-        pass
-    return render(request, 'add.html')
+    else:
+        if 'submitted' in request.GET:
+            submitted = True
+    return render(request, 'add.html', {'submitted': submitted})

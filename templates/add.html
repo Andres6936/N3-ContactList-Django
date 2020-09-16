@@ -3,59 +3,82 @@
 
     <section class="row row-cols-1 pb-5" style="background-color: #ffffff">
 
-        <form class="col mx-5 spectrum-Form" method="post">
-            <div class="spectrum-Form-item">
-                <label for="add-first-name" class="spectrum-Form-itemLabel spectrum-FieldLabel--right">First
-                    Name</label>
-                <div class="spectrum-Form-itemField">
-                    <div class="spectrum-Textfield">
-                        <input class="spectrum-Textfield-input" aria-invalid="false" type="text"
-                               placeholder="Enter your first name" id="add-first-name">
+        {% if submitted %}
+
+            <div class="offset-2 col-8 spectrum-Alert spectrum-Alert--success">
+                <div class="row row-cols-2">
+                    <div class="col-11">
+                        <div class="spectrum-Alert-header">Successful Send of Form</div>
+                        <div class="spectrum-Alert-content">The form has been sended.</div>
+                    </div>
+                    <div class="col-1">
+                        <svg class="spectrum-Icon spectrum-UIIcon-SuccessMedium spectrum-Alert-icon" focusable="false"
+                             aria-hidden="true" style="transform: translateY(-20px)">
+                            <use href="#spectrum-css-icon-SuccessMedium"></use>
+                        </svg>
                     </div>
                 </div>
             </div>
 
-            <div class="spectrum-Form-item">
-                <label for="add-last-name" class="spectrum-Form-itemLabel spectrum-FieldLabel--right">Last Name</label>
-                <div class="spectrum-Form-itemField">
-                    <div class="spectrum-Textfield">
-                        <input class="spectrum-Textfield-input" aria-invalid="false" type="text"
-                               placeholder="Enter your last name" id="add-last-name">
+        {% else %}
+
+            <form class="col mx-5 spectrum-Form" method="post">
+                <div class="spectrum-Form-item">
+                    <label for="add-first-name" class="spectrum-Form-itemLabel spectrum-FieldLabel--right">First
+                        Name</label>
+                    <div class="spectrum-Form-itemField">
+                        <div class="spectrum-Textfield">
+                            <input class="spectrum-Textfield-input" aria-invalid="false" type="text"
+                                   placeholder="Enter your first name" id="add-first-name">
+                        </div>
                     </div>
                 </div>
-            </div>
 
-            <div class="spectrum-Form-item">
-                <label for="add-telephone" class="spectrum-Form-itemLabel spectrum-FieldLabel--right">Telephone</label>
-                <div class="spectrum-Form-itemField">
-                    <div class="spectrum-Textfield">
-                        <input class="spectrum-Textfield-input" aria-invalid="false" type="number"
-                               placeholder="Enter your telephone" id="add-telephone">
+                <div class="spectrum-Form-item">
+                    <label for="add-last-name" class="spectrum-Form-itemLabel spectrum-FieldLabel--right">Last
+                        Name</label>
+                    <div class="spectrum-Form-itemField">
+                        <div class="spectrum-Textfield">
+                            <input class="spectrum-Textfield-input" aria-invalid="false" type="text"
+                                   placeholder="Enter your last name" id="add-last-name">
+                        </div>
                     </div>
                 </div>
-            </div>
 
-            <div class="spectrum-Form-item">
-                <label for="add-email" class="spectrum-Form-itemLabel spectrum-FieldLabel--right">Email</label>
-                <div class="spectrum-Form-itemField">
-                    <div class="spectrum-Textfield">
-                        <input class="spectrum-Textfield-input" aria-invalid="false" type="email"
-                               placeholder="Enter your e-mail address" id="add-email">
+                <div class="spectrum-Form-item">
+                    <label for="add-telephone"
+                           class="spectrum-Form-itemLabel spectrum-FieldLabel--right">Telephone</label>
+                    <div class="spectrum-Form-itemField">
+                        <div class="spectrum-Textfield">
+                            <input class="spectrum-Textfield-input" aria-invalid="false" type="number"
+                                   placeholder="Enter your telephone" id="add-telephone">
+                        </div>
                     </div>
                 </div>
-            </div>
 
-            <div class="spectrum-Form-item">
-                <button class="spectrum-Button spectrum-Button--cta" type="submit">
-                    <span class="spectrum-Button-label">Send</span>
-                </button>
-            </div>
+                <div class="spectrum-Form-item">
+                    <label for="add-email" class="spectrum-Form-itemLabel spectrum-FieldLabel--right">Email</label>
+                    <div class="spectrum-Form-itemField">
+                        <div class="spectrum-Textfield">
+                            <input class="spectrum-Textfield-input" aria-invalid="false" type="email"
+                                   placeholder="Enter your e-mail address" id="add-email">
+                        </div>
+                    </div>
+                </div>
 
-            <!-- All POST forms targeted at internal URLs should use the { csrf_token } template tag.
-                 This is to protect against Cross-Site Request Forgeries (CSRF). -->
-            {% csrf_token %}
+                <div class="spectrum-Form-item">
+                    <button class="spectrum-Button spectrum-Button--cta" type="submit">
+                        <span class="spectrum-Button-label">Send</span>
+                    </button>
+                </div>
 
-        </form>
+                <!-- All POST forms targeted at internal URLs should use the { csrf_token } template tag.
+                     This is to protect against Cross-Site Request Forgeries (CSRF). -->
+                {% csrf_token %}
+
+            </form>
+
+        {% endif %}
 
     </section>
 
