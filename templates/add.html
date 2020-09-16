@@ -50,6 +50,11 @@
                     <span class="spectrum-Button-label">Send</span>
                 </button>
             </div>
+
+            <!-- All POST forms targeted at internal URLs should use the { csrf_token } template tag.
+                 This is to protect against Cross-Site Request Forgeries (CSRF). -->
+            {% csrf_token %}
+
         </form>
 
     </section>
